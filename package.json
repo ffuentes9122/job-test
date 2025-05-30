@@ -1,0 +1,13 @@
+{
+  "name": "apply-digital-latam-qa",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@playwright/test": "^1.42.1",
+    "typescript": "^5.4.2"
+  }
+}
