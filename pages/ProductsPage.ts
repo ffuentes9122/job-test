@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class ProductsPage extends BasePage {
@@ -11,6 +11,7 @@ export class ProductsPage extends BasePage {
 
   async selectThirdProduct() {
     const thirdProduct = this.productItems.nth(2);
+    await expect(thirdProduct).toBeVisible();
     await this.clickElement(thirdProduct.locator('a:text("View Product")'));
   }
 }

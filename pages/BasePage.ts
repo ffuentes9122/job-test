@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class BasePage {
   readonly page: Page;
@@ -12,10 +12,12 @@ export class BasePage {
   }
 
   async clickElement(element: Locator) {
+    await expect(element).toBeVisible()
     await element.click();
   }
 
   async fillText(element: Locator, text: string) {
     await element.fill(text);
+    await expect(element).toHaveText(text)
   }
 }

@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class CartPage extends BasePage {
@@ -10,8 +10,8 @@ export class CartPage extends BasePage {
   }
 
   async proceedToCheckout() {
+    await expect(this.checkoutButton).toBeVisible();
     await this.checkoutButton.click();
-    // Wait for modal to appear
     await this.page.waitForSelector('#checkoutModal', { state: 'visible' });
   }
 }

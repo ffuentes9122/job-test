@@ -25,7 +25,7 @@ test.describe('Clothing Store User Flow', () => {
     await productsPage.selectThirdProduct();
     await expect(page).toHaveURL(/product_details/);
 
-    // Step 4: Enter random quantity
+    // Step 4: Enter random quantity for the third product
     const quantity = DataGenerator.getRandomQuantity();
     await productDetailsPage.setQuantity(quantity);
 
