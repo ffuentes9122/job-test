@@ -53,9 +53,9 @@ Expected Results
 
 **Why Playwright?**
 
-- Cross-browser support (Chromium, Firefox, WebKit)
-- Mobile emulation capabilities
-- Auto-wait mechanism reduces flakiness
-- Built-in test runner and reporter
-- Support for multiple viewports in single config
-- Excellent TypeScript support
+- Cross-browser support (Chromium, Firefox, WebKit). In this case I used Chromium since is my favorite browser for testing.
+- Mobile emulation capabilities. I can setup different devices.
+- Auto-wait mechanism reduces flakiness. Also the chance to setup retries when the suite is running in the CI
+- Built-in test runner and reporter. I can also setup custom error message to create a different output and feed any data visualitazion tool.
+- The TypeScript support. I like to keep consistency in the languages I use. If the web app is written using Angular, my go-to would be to use the same languages for maintenance.
+- The code generator that Playwright provides is a very good tool to catch locators in a hierarchical order which is very reliable.
