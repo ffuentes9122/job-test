@@ -1,5 +1,6 @@
 {
-  "name": "apply-digital-latam-qa",
+  "name": "job-test",
+  "author": "Fabian Fuentes",
   "version": "1.0.0",
   "scripts": {
     "test": "npx playwright test",
